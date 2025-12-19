@@ -1,0 +1,14 @@
+#Frequency: 
+Frequency is just the number of vibrations per second
+
+1 Vibration per second = 1 Hz (Low pitch)
+11,025 Vibrations per second = 11,025 Hz (High pitch)
+
+
+=>Sampling Rate: 
+If your sampling rate is 22 kHz, the "highest pitch" (frequency) sound you can record is 11 kHz.
+$$22,050 \text{ dots} \div 2 = 11,025 \text{ vibrations}$$
+
+Sampling Rate: The bucket of dots you have
+Frequency: The actual waves you build with those dots.
+Rule: The waves can never be faster than half the bucket speed.
