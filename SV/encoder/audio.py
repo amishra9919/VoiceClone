@@ -47,12 +47,12 @@ def  preprocess_wav(fpath_or_wav ,
         """
         will resample only for the first time
         this resamples the incoming sampling rate (source_sr=22050 hz) to sampling_rate(16000hz)
-        here duration = len(wav)/sampling rate. -{ sr wave per second in total len(wav) }
-        so here in wav resampling ... the sampling are changed that means len(wav) will also be changed as need to maintain the duration (as there in divison)
+        here, duration = len(wav)/sampling rate. -{ sr wave per second in total len(wav) }
+        on resampling the sample rate the duration remains the same 
         """
         wav = librosa.resample(wav, orig_sr=source_sr, target_sr=sampling_rate) 
         
-    # Apply the preprocessing: normalize volume and shorten long silences 
+    # Apply the preprocessing: normalize volume and shorten long silences and ofc the length will be little shoter as in normalizing the volume
     if normalize:
         wav = normalize_volume(wav, audio_norm_target_dBFS, increase_only=True)
     if webrtcvad and trim_silence:
